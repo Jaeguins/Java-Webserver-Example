@@ -33,23 +33,17 @@ class SocketHandler{
                 data += poppedMsg + "\n";
                 poppedMsg = readLine();
             }
-            String[] lines = data.split("\n");
-            String[][] headers = new String[lines.length][];
-            headers[0] = lines[0].substring(0, lines[0].lastIndexOf("HTTP/1.1")).split(" ");
-            for (int i = 1; i < lines.length; i++) {
-                headers[i] = lines[i].split(": ");
-            }
+            HTTPReceiver parser=new HTTPReceiver(data);
             byte[] out;
 
-        switch(headers[0][1]){
+        switch(parser.target){
             case "/":
-                redirect();
+                redirect("/html/index.html");
                 break;
             default:
-                //String division=headers[0][1].substring(headers.length-3,headers.length);
                 FileInputStream input;
-                input=new FileInputStream("res"+headers[0][1]);
-                out=new byte[(int)new File("res"+headers[0][1]).length()];
+                input=new FileInputStream("res"+parser.target);
+                out=new byte[(int)new File("res"+parser.target).length()];
                 input.read(out);
                 input.close();
                 writeData(out);
@@ -74,9 +68,9 @@ class SocketHandler{
         writer.writeBytes("\r\n");
         writer.flush();
     }
-    public void redirect()throws IOException{
+    public void redirect(String target)throws IOException{
         writer.writeBytes("HTTP/1.1 301 Moved Permanently\r\n");
-        writer.writeBytes("Location: http://127.0.0.1/html/index.html\r\n");
+        writer.writeBytes("Location: http://127.0.0.1"+target+"\r\n");
         writer.writeBytes("Content-Type: text/html;charset=utf-8\r\n");
         writer.writeBytes("\r\n");
         writer.writeBytes("\r\n");
@@ -92,22 +86,11 @@ class SocketHandler{
         writer.writeBytes("\r\n");
         writer.flush();
     }
-
-    public void writerClose()throws IOException{
-        writer.close();
-    }
-    public void readerClose()throws IOException{
-        reader.close();
-    }
-    public void close()throws IOException{
-        socket.close();
-    }
 }
 class ServerSocketHandler{
     public ServerSocket serverSocket;
     public boolean serverWaiting=true;
     Queue<SocketHandler> queue= new LinkedList<>();
-    Thread thread;
 
     public boolean isEmpty(){
         return queue.isEmpty();
@@ -150,5 +133,23 @@ class ServerSocketHandler{
 class LogStation{//logger
     public static void log(String sub,String msg){
         System.out.println(sub+" : "+msg);
+    }
+}
+class HTTPReceiver{
+    String info;
+    String target;
+    LinkedList<String> tags=new LinkedList<>();
+    LinkedList<String> data=new LinkedList<>();
+    public HTTPReceiver(String input){
+        String[] lines=input.split("\n");
+        String[] header=lines[0].substring(0, lines[0].lastIndexOf("HTTP/1.1")).split(" ");
+        info=header[0];
+        target=header[1];
+        for(int i=1;i<lines.length;i++){
+            String[] tmp=lines[i].split(": ");
+            tags.add(tmp[0]);
+            data.add(tmp[1]);
+        }
+
     }
 }
