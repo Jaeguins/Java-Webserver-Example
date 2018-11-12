@@ -4,6 +4,7 @@
 
 ## features:
 ### web server that works with resource files in ./res directory
+### only ip redirects to index.html.
 ### all files are sent with plain bytes.
 <hr/>
 
