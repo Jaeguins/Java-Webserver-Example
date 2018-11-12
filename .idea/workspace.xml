@@ -61,35 +61,40 @@
     <session id="1602540936">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="3" />
-          <entry key="project.open.time.1" value="2" />
+          <entry key="project.closed" value="9" />
+          <entry key="project.open.time.0" value="1" />
+          <entry key="project.open.time.1" value="5" />
           <entry key="project.open.time.16" value="1" />
+          <entry key="project.open.time.2" value="1" />
+          <entry key="project.open.time.7" value="1" />
           <entry key="project.open.time.9" value="1" />
-          <entry key="project.opened" value="4" />
+          <entry key="project.opened" value="10" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="html" value="1" />
           <entry key="ico" value="1" />
-          <entry key="jpg" value="1" />
+          <entry key="jpg" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="HTML" value="1" />
-          <entry key="Image" value="2" />
+          <entry key="Image" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.vcs.git.usages" />
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="552" />
+          <entry key="java" value="655" />
+          <entry key="txt" value="11" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="551" />
+          <entry key="JAVA" value="654" />
+          <entry key="PLAIN_TEXT" value="11" />
           <entry key="RegExp" value="1" />
         </counts>
       </usages-collector>
@@ -100,15 +105,11 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/WebServer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="100">
-              <caret line="34" column="13" lean-forward="true" selection-start-line="34" selection-start-column="13" selection-end-line="34" selection-end-column="13" />
+            <state relative-caret-position="92">
+              <caret line="36" column="23" lean-forward="true" selection-start-line="36" selection-start-column="23" selection-end-line="36" selection-end-column="23" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="method#readLine#0;class#SocketHandler#0" />
-                <element signature="method#writeData#0;class#SocketHandler#0" />
-                <element signature="method#writeData#1;class#SocketHandler#0" />
                 <element signature="method#redirect#0;class#SocketHandler#0" />
-                <element signature="method#notFound#0;class#SocketHandler#0" />
               </folding>
             </state>
           </provider>
@@ -128,6 +129,11 @@
     <findStrings>
       <find>body</find>
       <find>react</find>
+      <find>write</find>
+      <find>getByte</find>
+      <find>getBytes</find>
+      <find>log</find>
+      <find>ok</find>
     </findStrings>
     <replaceStrings>
       <replace>data</replace>
@@ -151,9 +157,9 @@
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="904" />
-    <option name="y" value="-8" />
-    <option name="width" value="938" />
+    <option name="x" value="793" />
+    <option name="y" value="120" />
+    <option name="width" value="941" />
     <option name="height" value="1087" />
   </component>
   <component name="ProjectView">
@@ -161,7 +167,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -169,19 +174,48 @@
               <item name="Java-Webserver-Example" type="b2602c69:ProjectViewProjectNode" />
               <item name="Java-Webserver-Example" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="Java-Webserver-Example" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Java-Webserver-Example" type="462c0819:PsiDirectoryNode" />
+              <item name="out" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Java-Webserver-Example" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Java-Webserver-Example" type="462c0819:PsiDirectoryNode" />
+              <item name="res" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Java-Webserver-Example" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Java-Webserver-Example" type="462c0819:PsiDirectoryNode" />
+              <item name="res" type="462c0819:PsiDirectoryNode" />
+              <item name="css" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Java-Webserver-Example" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Java-Webserver-Example" type="462c0819:PsiDirectoryNode" />
+              <item name="res" type="462c0819:PsiDirectoryNode" />
+              <item name="html" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Java-Webserver-Example" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Java-Webserver-Example" type="462c0819:PsiDirectoryNode" />
+              <item name="res" type="462c0819:PsiDirectoryNode" />
+              <item name="jpg" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
       <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.0" />
-    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.2" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -234,6 +268,14 @@
       <option name="presentableId" value="Default" />
       <updated>1536737526416</updated>
     </task>
+    <task id="LOCAL-00001" summary="parser made">
+      <created>1541054674443</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1541054674443</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TodoView">
@@ -249,14 +291,14 @@
     <frame x="59" y="-8" width="1869" height="1096" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4982699" visible="true" weight="0.09065782" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4982699" visible="true" weight="0.09784412" />
       <window_info id="Structure" order="1" sideWeight="0.5017301" side_tool="true" weight="0.09065782" />
       <window_info id="Designer" order="2" />
       <window_info id="UI Designer" order="3" />
       <window_info id="Favorites" order="4" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3236212" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.3298647" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32258064" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39854318" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -279,17 +321,11 @@
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="parser made" />
+    <option name="LAST_COMMIT_MESSAGE" value="parser made" />
+  </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/WebServer.java</url>
-          <line>38</line>
-          <properties />
-          <option name="timeStamp" value="3" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
     <watches-manager>
       <configuration name="Application">
         <watch expression="this" language="JAVA" />
@@ -350,9 +386,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/res/jpg/background.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/res/favicon.ico">
       <provider selected="true" editor-type-id="images" />
     </entry>
@@ -373,17 +406,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/res/jpg/background.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/WebServer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="34" column="13" lean-forward="true" selection-start-line="34" selection-start-column="13" selection-end-line="34" selection-end-column="13" />
+        <state relative-caret-position="92">
+          <caret line="36" column="23" lean-forward="true" selection-start-line="36" selection-start-column="23" selection-end-line="36" selection-end-column="23" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#readLine#0;class#SocketHandler#0" />
-            <element signature="method#writeData#0;class#SocketHandler#0" />
-            <element signature="method#writeData#1;class#SocketHandler#0" />
             <element signature="method#redirect#0;class#SocketHandler#0" />
-            <element signature="method#notFound#0;class#SocketHandler#0" />
           </folding>
         </state>
       </provider>

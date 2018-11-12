@@ -29,13 +29,12 @@ class SocketHandler{
             String poppedMsg = readLine();
             String data = "";
             while (!poppedMsg.equals("")) {
-                LogStation.log(sub, poppedMsg);
                 data += poppedMsg + "\n";
                 poppedMsg = readLine();
             }
+            LogStation.log(sub, "data received.");
             HTTPReceiver parser=new HTTPReceiver(data);
             byte[] out;
-
         switch(parser.target){
             case "/":
                 redirect("/html/index.html");
@@ -47,17 +46,16 @@ class SocketHandler{
                 input.read(out);
                 input.close();
                 writeData(out);
+                LogStation.log("server","send "+parser.target);
                 break;
         }
+        socket.close();
         }catch(IOException e){
             notFound();
         }
     }
     public String readLine()throws IOException{
         return reader.readLine();
-    }
-    public void writeData(String input)throws IOException{
-        writeData(input.getBytes());
     }
     public void writeData(byte[] data)throws IOException{
         writer.writeBytes("HTTP/1.1 200 OK \r\n");
@@ -67,6 +65,7 @@ class SocketHandler{
         writer.write(data, 0, data.length);
         writer.writeBytes("\r\n");
         writer.flush();
+
     }
     public void redirect(String target)throws IOException{
         writer.writeBytes("HTTP/1.1 301 Moved Permanently\r\n");
@@ -132,7 +131,8 @@ class ServerSocketHandler{
 
 class LogStation{//logger
     public static void log(String sub,String msg){
-        System.out.println(sub+" : "+msg);
+
+        System.out.println("$ "+sub+" : "+msg);
     }
 }
 class HTTPReceiver{
